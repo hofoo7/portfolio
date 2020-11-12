@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="rellax" id="svgBackground" data-rellax-speed="-3" data-rellax-zindex="5">
+    <svg id="gradient-rotate" preserveAspectRatio="none" viewBox="0 0 500 500">
+    <defs>
+        <linearGradient x1="0%" y1="0%" y2="100%" id="a">
+        <stop id="color-stop-1" stop-color="#22C8F6" offset="0%"></stop>
+        <stop id="color-stop-2" stop-color="#20C498" offset="65%"></stop>
+        <stop id="color-stop-3" stop-color="#189932" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <!-- <path fill="url(#a)" d="M0 0 h500 v200 L0 400 z"></path> -->
+    </svg>
+    
+    {% if title %}
+      <script>
+        setTimeout(function(){ alert("{{ title }}"); window.location.href='{{ url_for("index") }}'; }, 1000);
+      </script>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='js/rellax.min.js') }}"></script>
+    <script>
+      var rellax = new Rellax('.rellax');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/trianglify.js') }}"></script>
+    <script>
+    function makeTriangles() {
+      if (document.contains(document.getElementById("trianglify-overlay"))) {
+        document.getElementById("trianglify-overlay").remove();
+      }
+      const pattern = trianglify({
+          height: window.innerHeight,
+          width: window.innerWidth,
+          xColors: ['rgba(255, 255, 255, 0.01)', 'rgba(255, 255, 255, 1)'],
+          yColors: 'match',
+          strokeWidth: 0.2,
+          seed: 777777,
+      })
+      var svg = pattern.toSVG()
+      svg.id = 'trianglify-overlay'
+      document.querySelector('#svgBackground').appendChild(svg)
+    }
+
+    function makeSVGElement(tag, attrs) {
+        var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
+        for (var k in attrs) {
+            el.setAttribute(k, attrs[k]);
+        }
+        el.setAttribute("id", "svgPath")
+        return el;
+    }
+
+    function resizeTriangle() {
+        if (document.contains(document.getElementById("svgPath"))) {
+            document.getElementById("svgPath").remove();
+        }
+        var svg_triangle = document.querySelector('#gradient-rotate');
+        var x_lenght = 200 + (200 / (1200 / document.body.getBoundingClientRect().width + 0.8))
+        var path = makeSVGElement('path', { d: 'M0 0 h500 v200 L0 ' + x_lenght + ' z',
+                                            fill: 'url(#a)',
+        });
+        svg_triangle.appendChild(path);
+    }
+
+    makeTriangles()
+    resizeTriangle()
+
+    document.body.onresize = function() {resizeTriangle(); makeTriangles()};
+
+    var offset = window.pageXOffset;
+    $(window).scroll(function () {
+        if(offset != window.pageXOffset)
+            window.scrollTo(0, window.pageYOffset);
+    });
+
+    </script>
+</div>
+
+
+<div class="rellax">
+
+  <div class="header">
+    <p class="navFont">hofo_works</p>
+    <div class="svg-icons">
+      <a href="https://www.facebook.com/mario.hoferica" target="_blank">
+        {% include 'fb_icon.svg' %}
+      </a>
+      <a href="https://www.instagram.com/hofo_works/" target="_blank">
+        {% include 'ig_icon.svg' %}
+      </a>
+    </div>
+  </div>
+
+  <div class="row1 roww">
+    <p class="font-weight-bold h1">Tvorím minimalistické prezentačné stránky priamo na mieru</p>
+    <div class="svg-monitor">
+      {% include 'monitor.svg' %}
+    </div>
+  </div>
+
+
+  <div class="row2 roww">
+    <div class="svg-house">
+      {% include 'house.svg' %}
+    </div>
+    <p class="font-weight-bold h1">Vhodné pre malé a stredné podniky, reštaurácie, fotografov...</p>
+  </div>
+
+  <div class="row4 roww">
+    <p class="h2">Projekty servírujem na serverless platformu, hosting Vás bude stáť <strong>pár centov ročne</strong><br><br>
+      Celková cena bude <strong>doména</strong> (okolo 11€) <strong>+ moja práca</strong></p>
+    <div class="svg-dollar">
+      {% include 'dollar.svg' %}
+    </div>
+  </div>
+
+  <div class="row3 roww">
+    <p class="font-weight-bold h1">Môj stack:</p>
+    <div class="svg-stack-grid">
+    {% include 'css.svg' %}
+    {% include 'html.svg' %}
+    {% include 'js.svg' %}
+    {% include 'django.svg' %}
+    </div>
+  </div>
+
+  
+
+  <div class="row5">
+    <form action="/form" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Správa</label>
+        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Napíš mi niečo..." required>{% if message %} {{ message }} {% endif %}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+</div>
+
+
+{% endblock %}

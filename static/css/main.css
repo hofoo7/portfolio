@@ -1,0 +1,519 @@
+html, body {
+padding:0;
+margin:0;
+height: 100%;
+width: 100%;
+font-family: Montserrat, sams-serif;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+#gradient-rotate {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: -webkit-fill-available;
+height: 100vh;
+z-index: -1;
+}
+#trianglify-overlay {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: -webkit-fill-available;
+height: 100vh;
+z-index: -1;
+}
+#color-stop-1 {
+-webkit-animation: change-color-1 12s ease-in-out infinite alternate;
+animation: change-color-1 12s ease-in-out infinite alternate
+}
+
+#color-stop-2 {
+-webkit-animation: change-color-2 12s ease-in-out infinite alternate;
+animation: change-color-2 12s ease-in-out infinite alternate
+}
+
+#color-stop-3 {
+-webkit-animation: change-color-3 12s ease-in-out infinite alternate;
+animation: change-color-3 12s ease-in-out infinite alternate
+}
+@keyframes change-color-1 {
+0% {
+    stop-color: #22C8F6
+}
+
+25% {
+    stop-color: #ff0
+}
+
+50% {
+    stop-color: #00ffcb
+}
+
+75% {
+    stop-color: #70ff00
+}
+}
+@keyframes change-color-2 {
+0% {
+    stop-color: #20C498
+}
+
+25% {
+    stop-color: #ff00ad
+}
+
+350% {
+    stop-color: #d480ff
+}
+
+75% {
+    stop-color: #ff9200
+}
+}
+@keyframes change-color-3 {
+0% {
+    stop-color: #189932
+}
+
+25% {
+    stop-color: #c300cb
+}
+
+50% {
+    stop-color: #5600d4
+}
+
+75% {
+    stop-color: #ff46dc
+}
+}
+
+#svgBackground {
+    z-index: -1;
+}
+
+
+
+.navFont {
+    margin: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 0;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 0px #e2f1ff, 0 0 0 #000, 0 0px 5px #fff;
+}
+/* Don't show shadows when selecting text */
+::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+::selection { background: #5af; color: #fff; text-shadow: none; }
+
+
+
+.svg-stack-grid {
+    margin: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem 20rem;
+}
+
+.svg-stack-grid svg {
+    height: 10rem;
+    margin: auto;
+}
+
+
+.svg-monitor svg {
+    margin: 0;
+    padding: 0;
+    width: 30rem;
+    height: auto;
+}
+
+.svg-monitor {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    margin: 0;
+    padding: 0 3rem;
+    position: relative;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.roww {
+    overflow: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    margin: auto;
+    padding: 0;
+    padding-top: 10rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.roww p {
+    margin: 0;
+    padding: 0;
+    mix-blend-mode: luminosity;
+    text-align: center;
+    word-break: break-word;
+}
+
+.row1{
+    padding-top: 2rem;
+}
+
+.row1 p {
+    padding: 0 2rem;
+}
+
+.row2 {
+    grid-template-columns: 40vw 55vw;
+    padding-top: 2rem;
+}
+
+.row2 p {
+    padding-right: 4rem;
+}
+
+.row3 {
+    justify-content: end;
+    grid-template-columns: 40vw 60vw;
+}
+
+.row4 {
+    padding: 0;
+    grid-template-columns: 50vw 40vw;
+}
+
+.svg-dollar svg {
+    width: 30rem;
+}
+
+.row5 {
+    width: 40rem;
+    height: 50rem;
+    margin: auto;
+    position: relative;
+    right: -8;
+    overflow: visible;
+    background:
+     url(mail.svg)    /* image */
+     center / 40rem 40rem /* position / size */
+     no-repeat                /* repeat */
+     padding-box              /* origin */
+     content-box              /* clip */
+}
+
+.row5 form {
+    width: 20rem;
+    margin: auto;
+    position: relative;
+    top: 110;
+    right: 10;
+}
+
+.svg-house {
+    position: relative;
+    right: 6vw;
+}
+.svg-house svg {
+    margin: 0;
+    padding: 0;
+    width: 30rem;
+    height: auto;
+}
+
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+fill: #ffffff;
+}
+
+.svg-icon circle {
+stroke: #ffffff;
+stroke-width: 1;
+}
+
+.h1 {
+    font-size: 3rem;
+    word-break: break-word;
+}
+
+
+.svg-icon {
+    width: 4em;
+    height: 4em;
+}
+
+
+
+@media (max-width: 575px) {
+    .header{
+        padding: 0 1rem;
+    }
+    .navFont {
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
+    .svg-monitor svg {
+        width: 28rem;
+    }
+    .svg-house {
+        right: 10rem;
+    }
+    .svg-house svg {
+        width: 20rem;
+    }
+
+    .svg-icon {
+        width: 2em;
+        height: 2em;
+    }
+    .row1 p {
+        padding: 0;
+        padding-left: 0.5rem;
+    }
+    .row2 p {
+        padding: 0;
+        padding-left: 1rem;
+        margin: auto;
+    }
+    .row3 {
+        grid-template-columns: 95vw;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .row3 p {
+        padding-bottom: 1.5rem;
+    }
+    .svg-stack-grid {
+        grid-template-columns: 18vw 18vw 18vw 22vw;
+        margin: auto;
+    }
+    
+    .svg-stack-grid svg {
+        height: 3.5rem;
+        margin: auto;
+    }
+
+    .h1 {
+        font-size: 1.7rem;
+    }
+
+    .h2 {
+        font-size: 1.5rem;
+    }
+
+    .row5 {
+        max-width: 100%;
+        width: 30rem;
+        height: 34rem;
+        margin: auto;
+        position: relative;
+        overflow: visible;
+        background:
+         url(mail.svg)    /* image */
+         center / 25rem 25rem /* position / size */
+         no-repeat                /* repeat */
+         padding-box              /* origin */
+         content-box              /* clip */
+    }
+    
+    .row5 form {
+        width: 15rem;
+        top: 95;
+        right: 10;
+    }
+
+    .svg-dollar svg {
+        width: 15rem;
+    }
+
+}
+
+@media (min-width: 576px) {
+    .header{
+        padding: 0 1rem;
+    }
+    .navFont {
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
+    .svg-monitor svg {
+        width: 20rem;
+    }
+    .svg-house {
+        right: 5rem;
+    }
+    .svg-house svg {
+        width: 20rem;
+    }
+
+    .svg-icon {
+        width: 3em;
+        height: 3em;
+    }
+    .row2 p {
+        padding: 0;
+        padding-left: 1rem;
+        margin: auto;
+    }
+    .row3 {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .row3 p {
+        padding-bottom: 1.5rem;
+    }
+
+    .svg-stack-grid {
+        grid-template-columns: 24vw 24vw 24vw 28vw;
+    }
+    
+    .svg-stack-grid svg {
+        height: 5rem;
+        margin: auto;
+    }
+
+    .h1 {
+        font-size: 1.7rem;
+    }
+
+    .h2 {
+        font-size: 1.5rem;
+    }
+
+    .row5 {
+        width: 40rem;
+        height: 50rem;
+        margin: auto;
+        position: relative;
+        overflow: visible;
+        background:
+         url(mail.svg)    /* image */
+         center / 40rem 40rem /* position / size */
+         no-repeat                /* repeat */
+         padding-box              /* origin */
+         content-box              /* clip */
+    }
+    
+    .row5 form {
+        width: 24rem;
+        margin: auto;
+        position: relative;
+        top: 110;
+        right: 10;
+    }
+
+    
+}
+
+
+@media (min-width: 768px) {
+    .navFont {
+        font-size: 3.5rem;
+    }
+    .svg-monitor svg {
+        width: 35rem;
+    }
+    .svg-icon {
+        width: 4em;
+        height: 4em;
+    }
+
+    .h1 {
+        font-size: 2.5rem;
+    }
+
+    .h2 {
+        font-size: 2.2rem;
+    }
+
+    .svg-stack-grid svg {
+        height: 9rem;
+    }
+
+    .row3 {
+        padding-top: 4rem;
+    }
+    .row3 p {
+        padding-bottom: 2.5rem;
+    }
+    .row5 form {
+        width: 25rem;
+    }
+    
+}
+
+
+@media (min-width: 992px) {
+    .navFont {
+        font-size: 4rem;
+    }
+    .svg-monitor svg {
+        width: 50rem;
+    }
+    .svg-icon {
+        width: 3em;
+        height: 3em;
+    }
+    .svg-stack-grid {
+        grid-template-columns: 15vw 15vw 15vw 15vw;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .navFont {
+        font-size: 4rem;
+    }
+    .h1 {
+        font-size: 3rem;
+    }
+
+    .h2 {
+        font-size: 2.5rem;
+    }
+    .svg-house svg {
+        width: 30rem;
+    }
+    .svg-icon {
+        width: 4em;
+        height: 4em;
+    }
+}
+
+
+
