@@ -133,7 +133,7 @@ animation: change-color-3 12s ease-in-out infinite alternate
 }
 
 #bd1 {
-    right: 55vw;
+    right: 30vw;
     top: 38rem;
 }
 
@@ -149,7 +149,7 @@ animation: change-color-3 12s ease-in-out infinite alternate
 
 #rd1 {
     right: 12vw;
-    top: 28rem;
+    top: 20rem;
 }
 
 #rd2 {
@@ -221,7 +221,6 @@ animation: change-color-3 12s ease-in-out infinite alternate
     margin: 0;
     margin: auto;
     padding: 0;
-    padding-top: 10rem;
     position: relative;
     display: grid;
     grid-template-columns: 60vw 40vw;
@@ -249,7 +248,6 @@ animation: change-color-3 12s ease-in-out infinite alternate
 
 .row2 {
     grid-template-columns: 40vw 55vw;
-    padding-top: 2rem;
 }
 
 .row2 p {
@@ -262,34 +260,36 @@ animation: change-color-3 12s ease-in-out infinite alternate
 }
 
 .row4 {
-    padding: 0;
+    padding: 2rem 0;
     grid-template-columns: 50vw 40vw;
 }
 
 .svg-dollar svg {
     width: 30rem;
+    height: auto;
 }
 
 .row5 {
+    padding-top: 4rem;
     width: 40rem;
-    height: 50rem;
+    height: 46rem;
     margin: auto;
     position: relative;
-    right: -8;
     overflow: visible;
     background:
      url(mail.svg)    /* image */
      center / 40rem 40rem /* position / size */
      no-repeat                /* repeat */
      padding-box              /* origin */
-     content-box              /* clip */
+     content-box;              /* clip */
+    width: -webkit-fill-available;
 }
 
 .row5 form {
     width: 20rem;
     margin: auto;
     position: relative;
-    top: 110;
+    top: 19;
     right: 10;
 }
 
@@ -406,7 +406,7 @@ footer p {
     }
 
     .row5 {
-        max-width: 100%;
+        max-width: 100vw;
         width: 30rem;
         height: 34rem;
         margin: auto;
@@ -414,7 +414,7 @@ footer p {
         overflow: visible;
         background:
          url(mail.svg)    /* image */
-         center / 25rem 25rem /* position / size */
+         center / 23rem 23rem /* position / size */
          no-repeat                /* repeat */
          padding-box              /* origin */
          content-box              /* clip */
@@ -422,8 +422,8 @@ footer p {
     
     .row5 form {
         width: 15rem;
-        top: 95;
-        right: 10;
+        top: 40;
+        right: 5;
     }
 
     .svg-dollar svg {
@@ -460,7 +460,7 @@ footer p {
     }
 
     #rd3 {
-        right: 30vw;
+        right: 10vw;
         top: 48rem;
     }
 
@@ -523,7 +523,7 @@ footer p {
 
     .row5 {
         width: 40rem;
-        height: 50rem;
+        height: 46rem;
         margin: auto;
         position: relative;
         overflow: visible;
@@ -539,7 +539,7 @@ footer p {
         width: 24rem;
         margin: auto;
         position: relative;
-        top: 110;
+        top: 19;
         right: 10;
     }
 
@@ -569,7 +569,7 @@ footer p {
     }
 
     #rd3 {
-        right: 30vw;
+        right: 8vw;
         top: 48rem;
     }
 
@@ -603,6 +603,14 @@ footer p {
 
     .svg-stack-grid svg {
         height: 9rem;
+    }
+
+    .roww {
+        padding-top: 1rem;
+    }
+
+    .row2 {
+        padding-top: 0;
     }
 
     .row3 {
@@ -653,8 +661,8 @@ footer p {
     }
     
     #rd2 {
-        right: 65vw;
-        top: 70rem;
+        right: 90vw;
+        top: 90rem;
     }
     
     #rd3 {
