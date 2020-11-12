@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from flask import Flask, render_template, request, redirect
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
