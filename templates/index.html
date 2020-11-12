@@ -2,7 +2,27 @@
 
 
 {% block body %}
-<div class="rellax" id="svgBackground" data-rellax-speed="-3" data-rellax-zindex="5">
+<div class="rellax" id="svgBackground" data-rellax-speed="-2" data-rellax-zindex="5">
+  <div class="svg-diamonds">
+    <div id="rd1" class="diamond">
+      {% include 'rd1.svg' %}
+    </div>
+    <div id="rd2" class="diamond">
+      {% include 'rd2.svg' %}
+    </div>
+    <div id="rd3" class="diamond">
+      {% include 'rd2.svg' %}
+    </div>
+    <div id="bd1" class="diamond">
+      {% include 'bd1.svg' %}
+    </div>
+    <div id="bd2" class="diamond">
+      {% include 'bd2.svg' %}
+    </div>
+    <div id="bd3" class="diamond">
+      {% include 'bd2.svg' %}
+    </div>
+  </div>
     <svg id="gradient-rotate" preserveAspectRatio="none" viewBox="0 0 500 500">
     <defs>
         <linearGradient x1="0%" y1="0%" y2="100%" id="a">
@@ -145,6 +165,10 @@
   </div>
 
 </div>
+
+<footer>
+  <p>&copy;hofo_works</p>
+</footer>
 
 
 {% endblock %}

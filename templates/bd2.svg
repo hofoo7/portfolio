@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="401.385" height="617.323" viewBox="0 0 401.385 617.323">
+  <defs>
+    <filter id="Path_8" x="41.784" y="223.411" width="359.601" height="343.198" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="bd2" transform="translate(-1351.071 -258.5)">
+    <g id="diamond" transform="matrix(-0.777, -0.629, 0.629, -0.777, 1576.519, 878.154)">
+      <g transform="matrix(-0.78, 0.63, -0.63, -0.78, 565.17, 339.68)" filter="url(#Path_8)">
+        <path id="Path_8-2" data-name="Path 8" d="M146.263,200.568,0,19H292.527Z" transform="matrix(-0.78, -0.63, 0.63, -0.78, 266.16, 569.38)" fill="#2e63cc"/>
+      </g>
+      <path id="Path_9" data-name="Path 9" d="M292.527,83.7H0L50.436,3H242.091Z" fill="#85aaff"/>
+      <path id="Path_10" data-name="Path 10" d="M172.171,83.7,201.655,3H10L39.485,83.7Z" transform="translate(40.436)" fill="#638ff7"/>
+      <path id="Path_11" data-name="Path 11" d="M147.133,83.7,81.566,3,16,83.7Z" transform="translate(64.697)" fill="#9ac0f4"/>
+      <path id="Path_12" data-name="Path 12" d="M15.846,19,82.189,200.568,148.532,19Z" transform="translate(64.074 64.697)" fill="#467fcb"/>
+    </g>
+    <path id="Path_13" data-name="Path 13" d="M0,146V0" transform="translate(1583.5 407.5)" fill="none" stroke="#9a9a9a" stroke-width="10"/>
+    <line id="Line_3" data-name="Line 3" y1="240" transform="translate(1475.5 258.5)" fill="none" stroke="#c6c6c6" stroke-width="10"/>
+  </g>
+</svg>

@@ -24,7 +24,7 @@ bottom: 0;
 left: 0;
 width: -webkit-fill-available;
 height: 100vh;
-z-index: -1;
+z-index: -2;
 }
 #trianglify-overlay {
 position: absolute;
@@ -34,7 +34,7 @@ bottom: 0;
 left: 0;
 width: -webkit-fill-available;
 height: 100vh;
-z-index: -1;
+z-index: -2;
 }
 #color-stop-1 {
 -webkit-animation: change-color-1 12s ease-in-out infinite alternate;
@@ -102,10 +102,65 @@ animation: change-color-3 12s ease-in-out infinite alternate
 }
 }
 
-#svgBackground {
-    z-index: -1;
+.svg-diamonds {
+    width: -webkit-fill-available;
 }
 
+.rellax {
+    width: -webkit-fill-available;
+}
+
+.diamond {
+    z-index: -1;
+    position: fixed;
+}
+
+.diamond svg {
+    width: 5vw;
+    height: auto;
+}
+
+#rd2 svg {
+    width: 7vw;
+}
+
+#rd3 svg {
+    width: 9vw;
+}
+
+#bd2 svg {
+    width: 12vw;
+}
+
+#bd1 {
+    right: 55vw;
+    top: 38rem;
+}
+
+#bd2 {
+    right: 25vw;
+    top: 8rem;
+}
+
+#bd3 {
+    right: 88vw;
+    top: 60rem;
+}
+
+#rd1 {
+    right: 12vw;
+    top: 28rem;
+}
+
+#rd2 {
+    right: 80vw;
+    top: 22rem;
+}
+
+#rd3 {
+    right: 25vw;
+    top: 55rem;
+}
 
 
 .navFont {
@@ -272,6 +327,23 @@ stroke-width: 1;
     height: 4em;
 }
 
+footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #009B77;
+    color: white;
+    text-align: center;
+    height: 2rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
 
 
 @media (max-width: 575px) {
@@ -358,6 +430,40 @@ stroke-width: 1;
         width: 15rem;
     }
 
+    .diamond svg {
+        width: 15vw;
+    }
+    
+    #rd2 svg {
+        width: 18vw;
+    }
+    
+    #rd3 svg {
+        width: 16vw;
+    }
+    
+    #bd2 svg {
+        width: 24vw;
+    }
+
+    #bd2 {
+        right: 6vw;
+        top: 72rem;
+    }
+
+    #bd3 {
+        right: 78vw;
+    }
+
+    #rd2 svg {
+        display: none;
+    }
+
+    #rd3 {
+        right: 30vw;
+        top: 48rem;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -437,6 +543,40 @@ stroke-width: 1;
         right: 10;
     }
 
+    .diamond svg {
+        width: 15vw;
+    }
+    
+    #rd2 svg {
+        width: 18vw;
+    }
+    
+    #rd3 svg {
+        width: 20vw;
+    }
+    
+    #bd2 svg {
+        width: 24vw;
+    }
+
+    #bd2 {
+        right: 6vw;
+        top: 72rem;
+    }
+
+    #bd3 {
+        right: 78vw;
+    }
+
+    #rd3 {
+        right: 30vw;
+        top: 48rem;
+    }
+
+    #rd2 svg {
+        display: block;
+    }
+
     
 }
 
@@ -473,6 +613,53 @@ stroke-width: 1;
     }
     .row5 form {
         width: 25rem;
+    }
+    
+    .diamond svg {
+        width: 5vw;
+        height: auto;
+    }
+    
+    #rd2 svg {
+        width: 7vw;
+    }
+    
+    #rd3 svg {
+        width: 4vw;
+    }
+    
+    #bd2 svg {
+        width: 12vw;
+    }
+    
+    #bd1 {
+        right: 55vw;
+        top: 42rem;
+    }
+    
+    #bd2 {
+        right: 4vw;
+        top: 68rem;
+    }
+    
+    #bd3 {
+        right: 88vw;
+        top: 60rem;
+    }
+    
+    #rd1 {
+        right: 12vw;
+        top: 35rem;
+    }
+    
+    #rd2 {
+        right: 65vw;
+        top: 70rem;
+    }
+    
+    #rd3 {
+        right: 25vw;
+        top: 55rem;
     }
     
 }
