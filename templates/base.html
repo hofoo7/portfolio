@@ -1,8 +1,29 @@
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
+    <title>@hofo_works</title>
+    <meta name="title" content="Mario Hoferica">
+    <meta name="description" content="Freelance FullStack Web Dev">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://hofo_works.sk/">
+    <meta property="og:title" content="Mario Hoferica">
+    <meta property="og:description" content="Freelance FullStack Web Dev">
+    <meta property="og:image" content="{{ url_for('static', filename='images/meta.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://hofo_works.sk/">
+    <meta property="twitter:title" content="Mario Hoferica">
+    <meta property="twitter:description" content="Freelance FullStack Web Dev">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/meta.png') }}">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hofo_works</title>
+    <title>@hofo_works</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
