@@ -33,7 +33,7 @@ def form():
   server.sendmail(email, "hofericamario@gmail.com", message.as_string())
 
   if not email or not message:
-    error_statement = "Potrebné vyplniť obe polia..."
+    error_statement = u"Potrebné vyplniť obe polia..."
     return render_template('index.html',
       error_statement = error_statement,
       email = email,
@@ -43,7 +43,7 @@ def form():
   print(email)
   print(message)
 
-  title = "Ďakujem! Ozvem sa hneď, ako to bude možné..."
+  title = u"Ďakujem! Ozvem sa hneď, ako to bude možné..."
   return render_template('index.html', title = title)
 
 
