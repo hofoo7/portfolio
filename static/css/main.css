@@ -347,6 +347,17 @@ footer p {
     margin: 0;
 }
 
+@media (max-height: 600px) {
+    .svg-diamonds {
+        display: none;
+    }
+}
+
+@media (min-height: 600px) {
+    .svg-diamonds {
+        display: block;
+    }
+}
 
 @media (max-width: 575px) {
     .header{
