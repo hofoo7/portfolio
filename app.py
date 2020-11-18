@@ -11,6 +11,10 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
+@app.route('/hosting')
+def post1():
+  return render_template('post1.html')
+
 @app.route('/form', methods=["POST"])
 def form():
   email = request.form.get("email")

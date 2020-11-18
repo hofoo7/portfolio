@@ -1,119 +1,10 @@
 {% extends 'base.html' %}
 
-
 {% block body %}
-<div class="rellax" id="svgBackground" data-rellax-speed="-2.5" data-rellax-zindex="5">
-  <div class="svg-diamonds">
-    <div id="rd1" class="diamond">
-      {% include 'rd1.svg' %}
-    </div>
-    <div id="rd2" class="diamond">
-      {% include 'rd2.svg' %}
-    </div>
-    <div id="rd3" class="diamond">
-      {% include 'rd2.svg' %}
-    </div>
-    <div id="bd1" class="diamond">
-      {% include 'bd1.svg' %}
-    </div>
-    <div id="bd2" class="diamond">
-      {% include 'bd2.svg' %}
-    </div>
-    <div id="bd3" class="diamond">
-      {% include 'bd2.svg' %}
-    </div>
-  </div>
-    <svg id="gradient-rotate" preserveAspectRatio="none" viewBox="0 0 500 500">
-    <defs>
-        <linearGradient x1="0%" y1="0%" y2="100%" id="a">
-        <stop id="color-stop-1" stop-color="#22C8F6" offset="0%"></stop>
-        <stop id="color-stop-2" stop-color="#20C498" offset="65%"></stop>
-        <stop id="color-stop-3" stop-color="#189932" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <!-- <path fill="url(#a)" d="M0 0 h500 v200 L0 400 z"></path> -->
-    </svg>
-    
-    {% if title %}
-      <script>
-        setTimeout(function(){ alert("{{ title }}"); window.location.href='{{ url_for("index") }}'; }, 1000);
-      </script>
-    {% endif %}
 
-    <script src="{{ url_for('static', filename='js/rellax.min.js') }}"></script>
-    <script>
-      var rellax = new Rellax('.rellax');
-    </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/trianglify.js') }}"></script>
-    <script>
-    function makeTriangles() {
-      if (document.contains(document.getElementById("trianglify-overlay"))) {
-        document.getElementById("trianglify-overlay").remove();
-      }
-      const pattern = trianglify({
-          height: window.innerHeight,
-          width: window.innerWidth,
-          xColors: ['rgba(255, 255, 255, 0.01)', 'rgba(255, 255, 255, 1)'],
-          yColors: 'match',
-          strokeWidth: 0.2,
-          seed: 777777,
-      })
-      var svg = pattern.toSVG()
-      svg.id = 'trianglify-overlay'
-      document.querySelector('#svgBackground').appendChild(svg)
-    }
-
-    function makeSVGElement(tag, attrs) {
-        var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
-        for (var k in attrs) {
-            el.setAttribute(k, attrs[k]);
-        }
-        el.setAttribute("id", "svgPath")
-        return el;
-    }
-
-    function resizeTriangle() {
-        if (document.contains(document.getElementById("svgPath"))) {
-            document.getElementById("svgPath").remove();
-        }
-        var svg_triangle = document.querySelector('#gradient-rotate');
-        var x_lenght = 200 + (200 / (1200 / document.body.getBoundingClientRect().width + 0.8))
-        var path = makeSVGElement('path', { d: 'M0 0 h500 v200 L0 ' + x_lenght + ' z',
-                                            fill: 'url(#a)',
-        });
-        svg_triangle.appendChild(path);
-    }
-
-    makeTriangles()
-    resizeTriangle()
-
-    document.body.onresize = function() {resizeTriangle(); makeTriangles()};
-
-    var offset = window.pageXOffset;
-    $(window).scroll(function () {
-        if(offset != window.pageXOffset)
-            window.scrollTo(0, window.pageYOffset);
-    });
-
-    </script>
-</div>
-
+{% include 'header.html' %}
 
 <div class="rellax">
-
-  <div class="header">
-    <p class="navFont">hofo_works</p>
-    <div class="svg-icons">
-      <a href="https://www.facebook.com/mario.hoferica" target="_blank">
-        {% include 'fb_icon.svg' %}
-      </a>
-      <a href="https://www.instagram.com/hofo_works/" target="_blank">
-        {% include 'ig_icon.svg' %}
-      </a>
-    </div>
-  </div>
 
   <div class="row1 roww">
     <p class="font-weight-bold h1">Tvorím minimalistické prezentačné stránky priamo na mieru</p>
@@ -132,9 +23,17 @@
 
   <div class="row4 roww">
     <p class="h2">Projekty hádžem na serverless platformu, hosting Vás bude stáť <strong>pár centov ročne</strong><br><br>
-      Celková cena bude <strong>doména</strong> (okolo 11€) <strong>+ moja práca</strong></p>
+      Celková cena bude <strong>doména</strong> (okolo 10€) <strong>+ moja práca</strong></p>
     <div class="svg-dollar">
       {% include 'dollar.svg' %}
+    </div>
+  </div>
+
+  <div class="post-card">
+    <a href="{{ url_for('post1') }}"><img src="{{ url_for('static', filename='images/gcp.png') }}" alt="Google Cloud Platform"></a>
+    <div class="post-card-desc">
+      <a href="{{ url_for('post1') }}" class="text-decoration-none text-reset"><h3 class="h2">Vlastn&yacute; web/blog za p&aacute;r centov mesačne?</h3></a>
+      <p>Platforma Google Cloud pon&uacute;ka mnoho produktov. N&aacute;s najviac zauj&iacute;maj&uacute; produkty kateg&oacute;rie <strong>Free Tier</strong>. Google pon&uacute;ka vlastn&yacute; VPC (Virtual Private Cloud, obdoba VPS) prakticky zadarmo...</p>
     </div>
   </div>
 
@@ -147,6 +46,8 @@
     {% include 'django.svg' %}
     </div>
   </div>
+
+  
 
   
 
@@ -166,9 +67,6 @@
 
 </div>
 
-<footer>
-  <p>&copy;hofo_works</p>
-</footer>
-
+{% include 'footer.html' %}
 
 {% endblock %}

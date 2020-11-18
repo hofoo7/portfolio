@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% include 'header.html' %}
+
+<div class="rellax">
+
+    <style>
+        .svg-diamonds {
+            display: none;
+        }
+    </style>
+
+
+    <div class="post">
+        <img src="{{ url_for('static', filename='images/gcp.png') }}" alt="Google Cloud Platform">
+        <h3>Vlastn&yacute; web/blog za p&aacute;r centov mesačne?</h3>
+        <br>
+        <p>Cel&yacute; proces tvorby web str&aacute;nky sa sklad&aacute; z troch z&aacute;kladn&yacute;ch pilierov:</p>
+        <ul>
+        <li>dom&eacute;na (alebo DNS, n&aacute;zov v&aacute;&scaron;ho webu, pomocou ktor&eacute;ho v&aacute;s ľudia m&ocirc;žu ľahko n&aacute;jsť)</li>
+        <li>CMS platforma (napr. WordPress, syst&eacute;m na spravovanie obsahu, a so spr&aacute;vnym CMS m&ocirc;žete aj ľahko upravovať vzhľad webu)</li>
+        <li>a hosting (miesto, kde bude v&aacute;&scaron; web umiestnen&yacute;)</li>
+        </ul>
+        <p><strong>Dom&eacute;na</strong> sa d&aacute; k&uacute;piť napr. sem&nbsp;<a title="websupport" href="https://www.websupport.sk/" target="_blank" rel="noopener">www.websupport.sk</a>, stoj&iacute; okolo 10&euro;.</p>
+        <p><strong>CMS</strong> platforma, my si vyberieme <strong>WordPress</strong>, sl&uacute;ži na jednoduch&yacute; a prehľadn&yacute; manažment obsahu str&aacute;nky. WordPress je najpouž&iacute;vanej&scaron;&iacute; a bezplatn&yacute;.</p>
+        <p><strong>Hosting&nbsp;</strong>je miesto, na ktorom je uložen&yacute; obsah V&aacute;&scaron;ho webu a jeho prostredn&iacute;ctvom je dostupn&yacute; cel&eacute;mu svetu. Najlacnej&scaron;ie hostingy v&yacute;jdu na približne 5&euro;/mesiac. Ročne je to teda okolo 60&euro;. Pre zač&iacute;naj&uacute;cich blogerov je to celkom dosť. Firmy a podniky, ktor&eacute; sa chc&uacute; prezentovať vlastnou web-str&aacute;nkou platia rovnak&uacute; sumu. Pritom ich prezentačn&yacute; web je jednoduch&yacute;, statick&yacute; a nevyuž&iacute;vaj&uacute; v&yacute;kon hostingu.</p>
+        <br>
+        <h3>Google Cloud Platform</h3>
+        <br>
+        <p>Platforma Google Cloud pon&uacute;ka mnoho produktov. N&aacute;s najviac zauj&iacute;maj&uacute; produkty kateg&oacute;rie <strong>Free Tier</strong>. Google pon&uacute;ka vlastn&yacute; VPC (Virtual Private Cloud, obdoba VPS) prakticky zadarmo. Tento VPC bude mať s&iacute;ce slab&yacute; v&yacute;kon, no ako zač&iacute;naj&uacute;ci bloger alebo firma nepl&aacute;nujeme simulovať jadrov&uacute; reakciu. Podľa zdrojov na webe to bude stačiť do približne 100-tis&iacute;v n&aacute;v&scaron;tev mesačne. Pri takej prem&aacute;vke si už bude blog na seba zar&aacute;bať a financie na v&yacute;konnej&scaron;&iacute; hosting sa n&aacute;jdu.</p>
+        <p><strong>Zhrnutie</strong>: aj tento web je hostovan&yacute; na Google Cloud. Pri zakladan&iacute; som si k&uacute;pil dom&eacute;nu za 11&euro;, <strong>mesačne ma hosting stoj&iacute; okolo 0,05&euro;</strong>. Celkom v&yacute;hodn&eacute;, nemysl&iacute;te?</p>
+        <br><br>
+        <h4 style="text-align: center;">&nbsp;Pon&uacute;kam vytvorenie a nastavenie hostingu cez Google Cloud za 20&euro;. Kontaktovať ma m&ocirc;žte pomocou ob&aacute;lky dole alebo cez FB / IG vpravo hore</h3>
+        <p style="text-align: center;">*s&uacute;časťou nieje nastavenie n&aacute;zvu dom&eacute;ny (nastavenie DNS)</p>
+    </div>
+
+    <div class="row5">
+        <form action="/form" method="POST">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Správa</label>
+            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Napíš mi niečo..." required>{% if message %} {{ message }} {% endif %}</textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock %}

@@ -105,6 +105,7 @@ animation: change-color-3 12s ease-in-out infinite alternate
 }
 
 .svg-diamonds {
+    display: none;
     width: -webkit-fill-available;
 }
 
@@ -347,6 +348,41 @@ footer p {
     margin: 0;
 }
 
+.post {
+    position: relative;
+    background: #fff;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.post img {
+    width: 32rem;
+    max-width: 40vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.post-card {
+    position: relative;
+    background: #fff;
+    width: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.post-card img {
+    height: auto;
+}
+
+.post-card-desc {
+    padding: 1.8rem;
+    height: 100%;
+}
+
+
+
 @media (max-height: 600px) {
     .svg-diamonds {
         display: none;
@@ -355,11 +391,11 @@ footer p {
 
 @media (min-height: 600px) {
     .svg-diamonds {
-        display: block;
+        display: none;
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
     .header{
         padding: 0 1rem;
     }
@@ -480,6 +516,42 @@ footer p {
         top: 48rem;
     }
 
+    .post {
+        margin: 2rem 0;
+        border-radius: 0;
+        box-shadow: none;
+        margin-bottom: 0;
+        padding: .7rem;
+        padding-bottom: 0;
+    }
+
+    .post img {
+        margin-bottom: .5rem;
+        max-width: 65vw;
+    }
+
+    .post-card {
+        margin: 0;
+        margin-top: 4rem;
+        padding: 0;
+        border: 1px solid #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 0;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .post-card img {
+        width: 20rem;
+        max-width: 55vw;
+        height: auto;
+    }
+    
+    .post-card-desc {
+        padding: 1.8rem;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -543,6 +615,7 @@ footer p {
     .row5 {
         width: 40rem;
         height: 46rem;
+        max-width: 100vw;
         margin: auto;
         position: relative;
         overflow: visible;
@@ -594,6 +667,28 @@ footer p {
 
     #rd2 svg {
         display: block;
+    }
+
+    .post-card {
+        margin: 0;
+        margin-top: 4rem;
+        padding: 0;
+        border: 1px solid #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 0;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .post-card img {
+        width: 20rem;
+        max-width: 35vw;
+        height: auto;
+    }
+    
+    .post-card-desc {
+        padding: 1.8rem;
     }
 
     
@@ -687,6 +782,48 @@ footer p {
     #rd3 {
         right: 25vw;
         top: 55rem;
+    }
+
+    .post {
+        margin: 2rem;
+        padding: 2rem;
+        border: 1px solid #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: .3rem;
+    }
+
+    .post-card {
+        position: relative;
+        background: #fff;
+        margin: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 0;
+        padding: 0;
+        border: 1px solid #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: .3rem;
+        width: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+    }
+    
+    .post-card img {
+        width: 18rem;
+        max-width: 35vw;
+        height: auto;
+    }
+    
+    .post-card-desc {
+        padding: 1.8rem;
+        border-left: solid;
+        border-width: 1px;
+        border-color: rgba(0, 0, 0, 0.19);
+    }
+
+    .post-card-desc p {
+        font-size: 1.3rem;
     }
     
 }
